@@ -3,6 +3,7 @@ from cassandra.auth import PlainTextAuthProvider
 from usuario.insert import inserir_usuario
 from usuario.select import buscar_usuarios
 from usuario.deletar import excluir_usuario
+from produto.insert import inserir_produto
 
 cloud_config= {
         'secure_connect_bundle': 'secure-connect-cassandra.zip'
@@ -15,7 +16,6 @@ row = session.execute("select release_version from system.local").one()
 
 if row:
     print("Conexão bem sucedida...")
-    print(session.execute("select * from usuarios").all())
     execucao = True
     
     while execucao:
@@ -24,6 +24,7 @@ if row:
             [1] inserir usuario
             [2] buscar usuarios
             [3] excluir usuario
+            [4] inserir produto
             [0] sair
             
             ''')
@@ -36,6 +37,8 @@ if row:
                 buscar_usuarios(session)
             case 3:
                 excluir_usuario(session)
+            case 4:
+                inserir_produto(session)
             case 0:
                 print('Até mais...')
                 execucao = False
