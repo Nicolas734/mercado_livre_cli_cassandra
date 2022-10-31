@@ -4,6 +4,7 @@ from usuario.insert import inserir_usuario
 from usuario.select import buscar_usuarios
 from usuario.deletar import excluir_usuario
 from produto.insert import inserir_produto
+from produto.select import buscar_produtos
 
 cloud_config= {
         'secure_connect_bundle': 'secure-connect-cassandra.zip'
@@ -25,6 +26,7 @@ if row:
             [2] buscar usuarios
             [3] excluir usuario
             [4] inserir produto
+            [5] buscar usuarios
             [0] sair
             
             ''')
@@ -39,6 +41,8 @@ if row:
                 excluir_usuario(session)
             case 4:
                 inserir_produto(session)
+            case 5:
+                buscar_produtos(session)
             case 0:
                 print('Até mais...')
                 execucao = False

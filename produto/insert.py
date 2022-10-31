@@ -10,7 +10,7 @@ def inserir_produto(session):
         nome = input(str("Digite o nome do produto: "))
         descricao = input(str("Digite a descrição do produto: "))
         preco = input(str("Digite o preço do produto: "))
-        quantidade = input(str("Digite a quantidade de produto em estoque: "))
+        quantidade = input(str("Digite a quantidade de produtos em estoque: "))
         data_postagem = dataAtual.strftime('%d/%m/%Y')
 
         produto = {'nome':nome, 'descricao':descricao, 'preco':preco, 'quantidade':quantidade, 'data_postagem':data_postagem }
