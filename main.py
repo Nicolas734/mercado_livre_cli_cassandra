@@ -11,6 +11,7 @@ from produto.deletar import excluir_produto
 
 from vendedor.select import buscar_vendedores
 from vendedor.insert import insert_vendedor
+from vendedor.deletar import excluir_vendedor
 
 cloud_config= {
         'secure_connect_bundle': 'secure-connect-cassandra.zip'
@@ -36,6 +37,7 @@ if row:
             [6] excluir produto
             [7] buscar vendedores
             [8] inserir vendedore
+            [9] excluir vendedor
             [0] sair
             
             ''')
@@ -58,6 +60,8 @@ if row:
                 buscar_vendedores(session)
             case 8:
                 insert_vendedor(session)
+            case 9:
+                excluir_vendedor(session)
             case 0:
                 print('Até mais...')
                 execucao = False

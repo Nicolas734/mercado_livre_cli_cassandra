@@ -21,7 +21,7 @@ CRUDS
     - atualizar
     - buscar                    *FINALIZADO
     - buscarpor id
-    - deletar
+    - deletar                   *FINALIZADO
 
 
 • COMPRAS
