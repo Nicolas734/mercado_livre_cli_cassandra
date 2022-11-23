@@ -1,0 +1,32 @@
+CRUDS
+
+• USUARIOS
+    - criar                     *FINALIZADO
+    - atualizar
+    - buscar                    *FINALIZADO
+    - buscarpor id
+    - deletar                   *FINALIZADO
+
+
+• PRODUTOS
+    - criar                     *FINALIZADO
+    - atualizar
+    - buscar                    *FINALIZADO
+    - buscarpor id
+    - deletar                   *FINALIZADO
+
+
+• VENDEDORES
+    - criar
+    - atualizar
+    - buscar
+    - buscarpor id
+    - deletar
+
+
+• COMPRAS
+    - criar
+    - atualizar
+    - buscar
+    - buscarpor id
+    - deletar

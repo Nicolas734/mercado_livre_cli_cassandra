@@ -4,6 +4,7 @@ def buscar_produtos(session):
 
     for produto in session.execute("select * from produtos"):
         print("|")
+        print(f'| id: {produto.id}')
         print(f'| Nome: {produto.nome}')
         print(f'| Descricao: {produto.descricao}')
         print(f'| Preço: {produto.preco}')
