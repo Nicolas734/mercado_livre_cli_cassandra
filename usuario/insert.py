@@ -9,7 +9,7 @@ def inserir_usuario(session):
     cpf = input(str('Digite o numero do cpf: '))
     rg = input(str('Digite o numero do rg: '))
     data_nascimento = input(str('Digite a data de nascimento: '))
-    telefone = input(str('Digite o numeor do telefone: '))
+    telefone = input(str('Digite o numero do telefone: '))
     endereco = input(str('Digite o endereço: '))
     
     session.execute("""

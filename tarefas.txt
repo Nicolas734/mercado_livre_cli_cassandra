@@ -17,9 +17,9 @@ CRUDS
 
 
 • VENDEDORES
-    - criar
+    - criar                     *FINALIZADO
     - atualizar
-    - buscar
+    - buscar                    *FINALIZADO
     - buscarpor id
     - deletar
 

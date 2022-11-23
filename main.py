@@ -1,11 +1,16 @@
 from cassandra.cluster import Cluster
 from cassandra.auth import PlainTextAuthProvider
+
 from usuario.insert import inserir_usuario
 from usuario.select import buscar_usuarios
 from usuario.deletar import excluir_usuario
+
 from produto.insert import inserir_produto
 from produto.select import buscar_produtos
 from produto.deletar import excluir_produto
+
+from vendedor.select import buscar_vendedores
+from vendedor.insert import insert_vendedor
 
 cloud_config= {
         'secure_connect_bundle': 'secure-connect-cassandra.zip'
@@ -29,6 +34,8 @@ if row:
             [4] inserir produto
             [5] buscar produtos
             [6] excluir produto
+            [7] buscar vendedores
+            [8] inserir vendedore
             [0] sair
             
             ''')
@@ -47,6 +54,10 @@ if row:
                 buscar_produtos(session)
             case 6:
                 excluir_produto(session)
+            case 7:
+                buscar_vendedores(session)
+            case 8:
+                insert_vendedor(session)
             case 0:
                 print('Até mais...')
                 execucao = False

@@ -3,7 +3,6 @@ import uuid
 
 def inserir_produto(session):
     dataAtual = date.today()
-    produtos = []
     execucao = True
     while execucao:
 
