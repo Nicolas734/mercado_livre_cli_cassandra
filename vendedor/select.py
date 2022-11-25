@@ -1,12 +1,20 @@
 def buscar_vendedores(session):
 
-    print('Listagem dos vendedores...\n')
+    vendedores = session.execute('select * from vendedores')
 
-    for usuario in session.execute('select * from vendedores'):
-        print('|')
-        print(f'| id: {usuario.id}')
-        print(f'| nome: {usuario.nome}')
-        print(f'| email: {usuario.email}')
-        print(f'| cnpj: {usuario.cnpj}')
-        print(f'| telefone: {usuario.telefone}')
-        print('|')
+    if vendedores:
+
+        print('Listagem dos vendedores...\n')
+
+        for vendedor in session.execute('select * from vendedores'):
+            print('|')
+            print(f'| id: {vendedor.id}')
+            print(f'| nome: {vendedor.nome}')
+            print(f'| email: {vendedor.email}')
+            print(f'| cnpj: {vendedor.cnpj}')
+            print(f'| telefone: {vendedor.telefone}')
+            print('|')
+
+    else:
+
+        print("Nenhum vendedor encontrado...")
