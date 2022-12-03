@@ -3,6 +3,7 @@ from cassandra.auth import PlainTextAuthProvider
 
 from usuario.insert import inserir_usuario
 from usuario.select import buscar_usuarios
+from usuario.update import atualizar_usuario
 from usuario.deletar import excluir_usuario
 
 from produto.insert import inserir_produto
@@ -45,6 +46,7 @@ if row:
             [10] buscar compras
             [11] inserir compra
             [12] excluir compra
+            [13] atualizar usuario
             [0] sair
             
             ''')
@@ -75,6 +77,8 @@ if row:
                 inserir_compra(session)
             case 12:
                 excluir_compra(session)
+            case 13:
+                atualizar_usuario(session)
             case 0:
                 print('Até mais...')
                 execucao = False
