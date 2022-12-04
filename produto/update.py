@@ -1,7 +1,6 @@
 from produto.select import buscar_produtos
 
 def atualiazr_produto(session):
-    execucao = True
 
     print('''Opções de edição:
     [1] editar todas as informações
@@ -30,7 +29,7 @@ def atualiazr_produto(session):
                 return
 
             else:
-                print("\nUsuario não encontrado...\n")
+                print("\nProduto não encontrado...\n")
                 return
 
         case 2:
@@ -40,6 +39,7 @@ def atualiazr_produto(session):
             resultado_busca_produto = session.execute(f"select * from produtos where id = '{id_produto}'")
 
             if resultado_busca_produto:
+                execucao = True
 
                 while execucao:
                     print('''
@@ -73,7 +73,7 @@ def atualiazr_produto(session):
                             print("Operação não entendida...")
 
             else:
-                print("\nUsuario não encontrado...\n")
+                print("\nProduto não encontrado...\n")
                 return
 
         case 0:

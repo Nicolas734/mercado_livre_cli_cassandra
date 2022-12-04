@@ -1,7 +1,6 @@
 from usuario.select import buscar_usuarios
 
 def atualizar_usuario(session):
-    execucao = True
 
     print('''Opções de edição:
     [1] editar todas as informações
@@ -43,6 +42,7 @@ def atualizar_usuario(session):
             resultado_busca_cliente = session.execute(f"select * from usuarios where id ='{id_usuario}'")
 
             if resultado_busca_cliente:
+                execucao = True
 
                 while execucao:
 

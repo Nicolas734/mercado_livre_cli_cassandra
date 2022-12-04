@@ -13,6 +13,7 @@ from produto.deletar import excluir_produto
 
 from vendedor.select import buscar_vendedores
 from vendedor.insert import insert_vendedor
+from vendedor.update import atualizar_vendedor
 from vendedor.deletar import excluir_vendedor
 
 from compra.select import buscar_compras
@@ -49,6 +50,7 @@ if row:
             [12] excluir compra
             [13] atualizar usuario
             [14] atualizar produto
+            [15] atualizar vendedor
             [0] sair
             
             ''')
@@ -83,6 +85,8 @@ if row:
                 atualizar_usuario(session)
             case 14:
                 atualiazr_produto(session)
+            case 15:
+                atualizar_vendedor(session)
             case 0:
                 print('Até mais...')
                 execucao = False
