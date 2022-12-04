@@ -10,7 +10,7 @@ CRUDS
 
 • PRODUTOS
     - criar                     *FINALIZADO
-    - atualizar
+    - atualizar                 *FINALIZADO
     - buscar                    *FINALIZADO
     - buscarpor id
     - deletar                   *FINALIZADO

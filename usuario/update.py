@@ -3,7 +3,7 @@ from usuario.select import buscar_usuarios
 def atualizar_usuario(session):
     execucao = True
 
-    print('''Opcções de edição:
+    print('''Opções de edição:
     [1] editar todas as informações
     [2] escolher o que deseja editar
     [0] Voltar
@@ -31,6 +31,7 @@ def atualizar_usuario(session):
                 session.execute(f"update usuarios set nome='{nome}', cpf='{cpf}', rg='{rg}', email='{email}', telefone='{telefone}', endereco='{endereco}', data_nascimento='{data_nascimento}' where id='{id_usuario}'")
                 print("\nAlterações realizadas com sucesso...\n")
                 return
+
             else:
                 print("\nUsuario não encontrado...\n")
                 return
@@ -46,14 +47,14 @@ def atualizar_usuario(session):
                 while execucao:
 
                     print('''
-        [1] Nome
-        [2] CPF
-        [3] RG
-        [4] Email
-        [5] Telefone
-        [6] Endereço
-        [7] Data de nascimento
-        [0] Finalizar alterações
+    [1] Nome
+    [2] CPF
+    [3] RG
+    [4] Email
+    [5] Telefone
+    [6] Endereço
+    [7] Data de nascimento
+    [0] Finalizar alterações
                     ''')
 
                     opcao = input(str("Digite o numero do que deseja atualizar: "))
@@ -84,10 +85,15 @@ def atualizar_usuario(session):
                             print("\nAlterações realizadas com sucesso...\n")
                             execucao = False
                             return
+                        case _:
+                            print("Operação não entendida...")
 
             else:
                 print("\nUsuario não encontrado...\n")
                 return
-        
+
         case 0:
             return
+
+        case _:
+            print("Operação não entendida...")

@@ -8,6 +8,7 @@ from usuario.deletar import excluir_usuario
 
 from produto.insert import inserir_produto
 from produto.select import buscar_produtos
+from produto.update import atualiazr_produto
 from produto.deletar import excluir_produto
 
 from vendedor.select import buscar_vendedores
@@ -47,6 +48,7 @@ if row:
             [11] inserir compra
             [12] excluir compra
             [13] atualizar usuario
+            [14] atualizar produto
             [0] sair
             
             ''')
@@ -79,9 +81,13 @@ if row:
                 excluir_compra(session)
             case 13:
                 atualizar_usuario(session)
+            case 14:
+                atualiazr_produto(session)
             case 0:
                 print('Até mais...')
                 execucao = False
+            case _:
+                print("Operação não entendida...")
 
 else:
     print("Ocorreu um erro.")
