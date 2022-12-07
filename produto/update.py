@@ -1,6 +1,6 @@
 from produto.select import buscar_produtos
 
-def atualiazr_produto(session):
+def atualizar_produto(session):
 
     print('''Opções de edição:
     [1] editar todas as informações
