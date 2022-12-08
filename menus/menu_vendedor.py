@@ -1,4 +1,4 @@
-from vendedor.select import buscar_vendedores
+from vendedor.select import buscar_vendedores, buscar_vendedor_id
 from vendedor.insert import insert_vendedor
 from vendedor.update import atualizar_vendedor
 from vendedor.deletar import excluir_vendedor
@@ -24,7 +24,7 @@ Opções:
             case 1:
                 buscar_vendedores(session)
             case 2:
-                print("Não criado...")
+                buscar_vendedor_id(session)
             case 3:
                 insert_vendedor(session)
             case 4:

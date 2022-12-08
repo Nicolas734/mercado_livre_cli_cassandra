@@ -1,5 +1,5 @@
+from produto.select import buscar_produtos, buscar_produto_id
 from produto.insert import inserir_produto
-from produto.select import buscar_produtos
 from produto.update import atualizar_produto
 from produto.deletar import excluir_produto
 
@@ -24,7 +24,7 @@ Opções:
             case 1:
                 buscar_produtos(session)
             case 2:
-                print("Não criado...")
+                buscar_produto_id(session)
             case 3:
                 inserir_produto(session)
             case 4:

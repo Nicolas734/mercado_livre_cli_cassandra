@@ -1,10 +1,10 @@
 from cassandra.cluster import Cluster
 from cassandra.auth import PlainTextAuthProvider
 
-from menu.menu_usuario import menu_usuario
-from menu.menu_produto import menu_produto
-from menu.menu_vendedor import menu_vendedor
-from menu.menu_compra import menu_compra
+from menus.menu_usuario import menu_usuario
+from menus.menu_produto import menu_produto
+from menus.menu_vendedor import menu_vendedor
+from menus.menu_compra import menu_compra
 
 cloud_config= {
         'secure_connect_bundle': 'secure-connect-cassandra.zip'

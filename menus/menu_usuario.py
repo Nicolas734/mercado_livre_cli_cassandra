@@ -1,5 +1,5 @@
+from usuario.select import buscar_usuarios, buscar_usuario_id
 from usuario.insert import inserir_usuario
-from usuario.select import buscar_usuarios
 from usuario.update import atualizar_usuario
 from usuario.deletar import excluir_usuario
 
@@ -24,7 +24,7 @@ Opções:
             case 1:
                 buscar_usuarios(session)
             case 2:
-                print("Não criado...")
+                buscar_usuario_id(session)
             case 3:
                 inserir_usuario(session)
             case 4:

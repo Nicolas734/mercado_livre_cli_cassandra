@@ -1,4 +1,4 @@
-from compra.select import buscar_compras
+from compra.select import buscar_compras, buscar_compra_id
 from compra.insert import inserir_compra
 from compra.deletar import excluir_compra
 
@@ -23,7 +23,7 @@ Opções:
             case 1:
                 buscar_compras(session)
             case 2:
-                print("Não criado...")
+                buscar_compra_id(session)
             case 3:
                 inserir_compra(session)
             case 4:

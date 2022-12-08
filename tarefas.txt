@@ -4,7 +4,7 @@ CRUDS
     - criar                     *FINALIZADO
     - atualizar                 *FINALIZADO
     - buscar                    *FINALIZADO
-    - buscarpor id
+    - buscar por id             *FINALIZADO
     - deletar                   *FINALIZADO
 
 
@@ -12,7 +12,7 @@ CRUDS
     - criar                     *FINALIZADO
     - atualizar                 *FINALIZADO
     - buscar                    *FINALIZADO
-    - buscarpor id
+    - buscar por id             *FINALIZADO
     - deletar                   *FINALIZADO
 
 
@@ -20,7 +20,7 @@ CRUDS
     - criar                     *FINALIZADO
     - atualizar                 *FINALIZADO
     - buscar                    *FINALIZADO
-    - buscarpor id
+    - buscar por id             *FINALIZADO
     - deletar                   *FINALIZADO
 
 
@@ -28,5 +28,5 @@ CRUDS
     - criar                     *FINALIZADO
     - atualizar
     - buscar                    *FINALIZADO
-    - buscarpor id
+    - buscar por id             *FINALIZADO
     - deletar                   *FINALIZADO
