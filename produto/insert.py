@@ -9,7 +9,7 @@ def inserir_produto(session):
 
     buscar_vendedores(session)
 
-    id_vendedor = input(str("Digite o nome do vendedor que deseja cadastrar um produto: "))
+    id_vendedor = input(str("Digite o id do vendedor que deseja cadastrar um produto: "))
 
     resultado_busca = session.execute(f"select * from vendedores where id = '{id_vendedor}'")
 
